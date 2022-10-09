@@ -10,9 +10,10 @@
 
 #define DEFAULT 0
 #define QWERTY  1
-#define LOWER   2
-#define RAISE   3
-#define OPTIONS 4
+#define WORKMAN 2
+#define LOWER   3
+#define RAISE   4
+#define OPTIONS 5
 
 / {
         keymap {
@@ -20,14 +21,14 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | TAB  |  Q  |  D  |  R  |  W  |  B  |   |  J  |  F   |  U  |  P  |  ;  | BKSP |
-// | CTRL |  A  |  S  |  H  |  T  |  G  |   |  Y  |  N   |  E  |  O  |  I  |  '   |
-// | SHFT |  Z  |  X  |  M  |  C  |  V  |   |  K  |  L   |  ,  |  .  |  /  | SHFT |
+// | TAB  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
+// | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
+// | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | SHFT |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB        &kp Q  &kp D  &kp R  &kp W  &kp B     &kp J  &kp F  &kp U      &kp P    &kp SEMI  &kp BSPC
-   &mt LCTRL ESC  &kp A  &kp S  &kp H  &kp T  &kp G     &kp Y  &kp N  &kp E      &kp O    &kp I     &kp SQT
-   &kp LSHFT      &kp Z  &kp X  &kp M  &kp C  &kp V     &kp K  &kp L  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+   &kp TAB        &kp Q  &kp W  &kp F  &kp P  &kp B     &kp J  &kp L  &kp U      &kp Y    &kp SEMI  &kp BSPC
+   &mt LCTRL ESC  &kp A  &kp R  &kp S  &kp T  &kp G     &kp M  &kp N  &kp E      &kp I    &kp O     &kp SQT
+   &kp LSHFT      &kp Z  &kp X  &kp C  &kp D  &kp V     &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                        &kp LGUI &mo LOWER &kp SPACE     &kp RET &mo RAISE &kp LALT
                         >;
                 };
@@ -45,6 +46,21 @@
                        &kp LGUI &mo LOWER &kp SPACE     &kp RET &mo RAISE &kp LALT
                         >;
                 };
+
+                workman_layer {
+// -----------------------------------------------------------------------------------------
+// | TAB  |  Q  |  D  |  R  |  W  |  B  |   |  J  |  F   |  U  |  P  |  ;  | BKSP |
+// | CTRL |  A  |  S  |  H  |  T  |  G  |   |  Y  |  N   |  E  |  O  |  I  |  '   |
+// | SHFT |  Z  |  X  |  M  |  C  |  V  |   |  K  |  L   |  ,  |  .  |  /  | SHFT |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        bindings = <
+   &kp TAB        &kp Q  &kp D  &kp R  &kp W  &kp B     &kp J  &kp F  &kp U      &kp P    &kp SEMI  &kp BSPC
+   &mt LCTRL ESC  &kp A  &kp S  &kp H  &kp T  &kp G     &kp Y  &kp N  &kp E      &kp O    &kp I     &kp SQT
+   &kp LSHFT      &kp Z  &kp X  &kp M  &kp C  &kp V     &kp K  &kp L  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                       &kp LGUI &mo LOWER &kp SPACE     &kp RET &mo RAISE &kp LALT
+                        >;
+                };
+
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL  |
@@ -81,7 +97,7 @@
 //                    |     |     |     |   |     |     |     |
                         bindings = <
    &trans      &trans        &trans        &trans        &trans       &trans          &trans  &kp F1  &kp F2   &kp F3  &kp F4   &trans
-   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &to DEFAULT  &to QWERTY      &trans  &kp F5  &kp F6   &kp F7  &kp F8   &trans
+   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &to WORKMAN  &to QWERTY      &to DEFAULT  &kp F5  &kp F6   &kp F7  &kp F8   &trans
    &trans      &trans        &trans        &trans        &trans       &trans          &trans  &kp F9  &kp F10  &kp F11 &kp F12  &trans
                                            &trans        &trans       &trans          &trans  &trans  &trans
                         >;
