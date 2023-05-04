@@ -25,8 +25,8 @@
             label = "LEFT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <200>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-            quick-tap-ms = <200>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <7 8 9 10 11 12>;    // <---[[right-hand keys]]
         };
@@ -36,8 +36,8 @@
             label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <200>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-            quick-tap-ms = <200>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <1 2 3 4 5 6>;    // <---[[left-hand keys]]
         };
@@ -93,7 +93,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &none    &kp Q           &kp W           &kp F            &kp P            &kp B     &kp J  &kp L            &kp U                &kp Y             &kp SEMI           &none
-   &none    &lh_pht LGUI A  &lh_pht LALT R  &lh_pht LCTRL S  &lh_pht LSHFT T  &kp G     &kp M  &hm LSHFT N  &hm LCTRL E      &hm LALT I    &hm LGUI O     &none
+   &none    &lh_pht LGUI A  &lh_pht LALT R  &lh_pht LCTRL S  &lh_pht LSHFT T  &kp G     &kp M  &rh_pht LSHFT N  &rh_pht LCTRL E      &rh_pht LALT I    &rh_pht LGUI O     &none
    &none    &kp Z           &kp X           &kp C            &kp D            &kp V     &kp K  &kp H            &kp COMMA            &kp DOT           &kp FSLH           &none
                              &lt NUM TAB  &lt NAV ESC  &lt SYM SPACE     &kp RET  &kp BSPC  &kp DEL
                     >;
