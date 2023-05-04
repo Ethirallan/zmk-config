@@ -18,6 +18,10 @@
 #define SYM     7
 #define OPTIONS 8
 
+&mt {
+    tapping-term-ms = <400>;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -57,9 +61,9 @@
 // |      |  Z  |  X  |  M  |  C  |  V  |   |  K  |  L   |  ,  |  .  |  /  |      |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &none    &kp Q       &kp D       &kp R        &kp W        &kp B     &kp J  &kp F        &kp U            &kp P         &kp SEMI       &none
-   &none    &mt LGUI A  &mt LALT S  &mt LCTRL H  &mt LSHFT T  &kp G     &kp Y  &mt LSHFT N  &mt LCTRL E      &mt LALT O    &mt LGUI I     &none
-   &none    &kp Z       &kp X       &kp M        &kp C        &kp V     &kp K  &kp L        &kp COMMA        &kp DOT       &kp FSLH       &none
+   &none    &kp Q       &kp W       &kp F        &kp P        &kp B     &kp J  &kp L        &kp U            &kp Y         &kp SEMI       &none
+   &none    &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G     &kp M  &mt LSHFT N  &mt LCTRL E      &mt LALT I    &mt LGUI O     &none
+   &none    &kp Z       &kp X       &kp C        &kp D        &kp V     &kp K  &kp H        &kp COMMA        &kp DOT       &kp FSLH       &none
                              &lt NUM TAB  &lt NAV ESC  &lt SYM SPACE     &kp RET  &kp BSPC  &kp DEL
                         >;
                 };
